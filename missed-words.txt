@@ -70,3 +70,5 @@ marius
 archie
 farthest
 antwerp
+colorado
+methinks
