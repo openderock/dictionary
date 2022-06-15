@@ -511,3 +511,7 @@ whitby
 walloon
 oxfordshire
 septuagint
+gloucestershire
+griffiths
+throwed
+durban
