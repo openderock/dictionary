@@ -208,3 +208,5 @@ symbolical
 jewess
 accustom
 versification
+descartes
+pluto
