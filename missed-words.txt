@@ -347,3 +347,6 @@ cm
 epirus
 agone
 wean
+enunciation
+hd
+tish
