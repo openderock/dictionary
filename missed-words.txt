@@ -475,3 +475,5 @@ manitoba
 tiberias
 wmo
 houseless
+barbados
+bestowal
