@@ -333,3 +333,5 @@ maltese
 selene
 micah
 filipino
+chivalric
+janus
