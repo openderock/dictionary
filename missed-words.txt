@@ -422,3 +422,4 @@ algonquin
 boeotia
 inverness
 hu
+whitsuntide
