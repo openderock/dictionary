@@ -229,3 +229,5 @@ expence
 vedic
 kong
 thirtieth
+malacca
+pertinacity
