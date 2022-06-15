@@ -293,3 +293,5 @@ sie
 argentina
 petrograd
 ner
+exactitude
+wallis
