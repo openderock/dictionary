@@ -238,3 +238,5 @@ paraphernalia
 embarkation
 anthea
 musa
+caracalla
+duval
