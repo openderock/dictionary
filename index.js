@@ -57,7 +57,7 @@ async function main() {
         records,
       };
       await persist(dir, word, data);
-      console.log(`[${colors.green(word)}]: saved.`);
+      console.log(`[${colors.green(word)}]: saved. ${(rank *100/wordsFrequency.length).toFixed(2)}%`);
     } catch (error) {
       console.log(`[${colors.green(word)}]: ${error.message}.`);
     }
