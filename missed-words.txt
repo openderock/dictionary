@@ -303,3 +303,5 @@ macedon
 abyssinian
 tyrolese
 abdul
+azores
+jauntily
