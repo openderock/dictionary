@@ -427,3 +427,5 @@ nh
 varuna
 ioc
 ecuador
+devonian
+mozambique
