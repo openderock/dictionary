@@ -402,3 +402,5 @@ mir
 vietnam
 zechariah
 tokyo
+geordie
+chaldean
