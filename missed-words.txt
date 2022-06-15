@@ -322,3 +322,7 @@ pegasus
 hesse
 han
 torah
+slavic
+southwark
+trollope
+kabul
