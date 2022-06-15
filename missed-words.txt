@@ -175,3 +175,6 @@ niger
 andreas
 tyrol
 lisa
+cherokee
+phillip
+calvary
