@@ -78,3 +78,5 @@ clarke
 marshall
 irishman
 constantine
+rosa
+nina
