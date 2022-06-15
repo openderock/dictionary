@@ -1,0 +1,22 @@
+{
+  "name": "dictionary",
+  "version": "1.0.0",
+  "description": "An English dictionary with words frequency info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openderock/dictionary.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openderock/dictionary/issues"
+  },
+  "homepage": "https://github.com/openderock/dictionary#readme",
+  "dependencies": {
+    "@derock.ir/words-frequency": "^1.1.0"
+  }
+}
