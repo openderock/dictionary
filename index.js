@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import colors from 'colors';
+import exec from 'await-exec';
 
 function lookup(word) {
   return fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
@@ -27,16 +28,16 @@ function generateDirectory(word) {
       return resolve(`${word[0]}/${word[1]}/${word[2]}`);
   }
 }
-async function persist(dir, word, def) {
-  writeFileSync(`${dir}/${word}.json`, JSON.stringify(def), {
+async function persist(dir, word, data) {
+  writeFileSync(`${dir}/${word}.json`, JSON.stringify(data), {
     encoding: 'utf-8',
   });
-  const { stdout } = await exec(`git commit -m "${word}" && git push`);
-  console.log(stdout);
+  const res = await exec(`git commit -m "${word}" && git push`);
+  console.log(res.stdout);
 }
 
 async function main() {
-  for (const [rank, word] of wordsFrequency) {
+  for (const [rank, word, occurrence] of wordsFrequency) {
     const dir = generateDirectory(word);
     mkdirSync(dir, { recursive: true });
     if (existsSync(`${dir}/${word}.json`)) {
@@ -44,8 +45,14 @@ async function main() {
       continue;
     }
     try {
-      const def = await lookup(word);
-      await persist(dir, word, def);
+      const records = await lookup(word);
+      const data = {
+        word,
+        rank,
+        occurrence,
+        records,
+      };
+      await persist(dir, word, data);
       console.log(`[${colors.green(word)}]: saved.`);
     } catch (error) {
       console.log(`[${colors.green(word)}]: ${error.message}.`);
