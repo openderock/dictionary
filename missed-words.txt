@@ -329,3 +329,7 @@ kabul
 ts
 scandinavia
 nepal
+maltese
+selene
+micah
+filipino
