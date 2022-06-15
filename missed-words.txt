@@ -250,3 +250,5 @@ cheshire
 queensland
 ethiopian
 highlander
+sharon
+heracles
