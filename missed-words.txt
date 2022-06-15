@@ -494,3 +494,5 @@ triste
 eocene
 ilo
 bahia
+magyar
+oc
