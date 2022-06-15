@@ -377,3 +377,5 @@ vin
 taciturnity
 pulsation
 uno
+lamely
+effeminacy
