@@ -32,7 +32,9 @@ async function persist(dir, word, data) {
   writeFileSync(`${dir}/${word}.json`, JSON.stringify(data), {
     encoding: 'utf-8',
   });
-  const res = await exec(`git commit -m "${word}" && git push`);
+  const res = await exec(
+    `git add --all && git commit -m "${word}" && git push`
+  );
   console.log(res.stdout);
 }
 
