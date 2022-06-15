@@ -1,6 +1,6 @@
 import wordsFrequency from '@derock.ir/words-frequency';
 import fetch from 'node-fetch';
-import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, unlinkSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import colors from 'colors';
 import exec from 'await-exec';
@@ -41,9 +41,10 @@ async function persist(dir, word, data) {
 }
 
 async function main() {
+  unlinkSync(resolve('missed-words.txt'));
   for (const [rank, word, occurrence] of wordsFrequency) {
     if (word == 'con') {
-      return;
+      continue;
     }
     const dir = generateDirectory(word);
     mkdirSync(dir, { recursive: true });
