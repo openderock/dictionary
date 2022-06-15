@@ -465,3 +465,5 @@ betrayer
 loudness
 rimini
 paulo
+salzburg
+giuseppe
