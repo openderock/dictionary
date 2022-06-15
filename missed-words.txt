@@ -81,3 +81,5 @@ constantine
 rosa
 nina
 celtic
+dose
+evans
