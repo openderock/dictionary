@@ -297,3 +297,5 @@ exactitude
 wallis
 pavia
 derbyshire
+taurus
+gavin
