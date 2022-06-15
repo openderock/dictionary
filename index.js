@@ -42,6 +42,9 @@ async function persist(dir, word, data) {
 
 async function main() {
   for (const [rank, word, occurrence] of wordsFrequency) {
+    if (word == 'con') {
+      return;
+    }
     const dir = generateDirectory(word);
     mkdirSync(dir, { recursive: true });
     if (existsSync(`${dir}/${word}.json`)) {
@@ -57,9 +60,18 @@ async function main() {
         records,
       };
       await persist(dir, word, data);
-      console.log(`[${colors.green(word)}]: saved. ${(rank *100/wordsFrequency.length).toFixed(2)}%`);
+      console.log(
+        `[${colors.green(word)}]: saved. ${(
+          (rank * 100) /
+          wordsFrequency.length
+        ).toFixed(2)}%`
+      );
     } catch (error) {
       console.log(`[${colors.green(word)}]: ${error.message}.`);
+      writeFileSync(resolve('missed-words.txt'), `\n${word}`, {
+        encoding: 'utf-8',
+        flag: 'a+',
+      });
     }
   }
 }
