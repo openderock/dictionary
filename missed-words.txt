@@ -240,3 +240,5 @@ anthea
 musa
 caracalla
 duval
+eu
+romany
