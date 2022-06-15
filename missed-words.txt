@@ -265,3 +265,4 @@ macedonians
 aggrandizement
 execration
 deceiver
+punic
