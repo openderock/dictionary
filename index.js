@@ -33,11 +33,11 @@ async function persist(dir, word, data) {
     encoding: 'utf-8',
   });
   if (data.rank % 10 == 0) {
-    const res = await exec(
+    const { stdout } = await exec(
       `git add --all && git commit -m "${word}" && git push`
     );
+    console.log(stdout);
   }
-  console.log(res.stdout);
 }
 
 async function main() {
