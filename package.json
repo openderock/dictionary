@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/openderock/dictionary#readme",
   "dependencies": {
-    "@derock.ir/words-frequency": "^1.1.0",
+    "@derock.ir/words-frequency": "^1.2.0",
     "await-exec": "^0.1.2",
     "colors": "^1.4.0",
     "node-fetch": "^3.2.6"
