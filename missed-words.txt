@@ -215,3 +215,4 @@ sa
 zulu
 veda
 docility
+lameness
