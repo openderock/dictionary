@@ -343,3 +343,4 @@ affably
 thousandth
 fahrenheit
 ww
+cm
