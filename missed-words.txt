@@ -93,3 +93,5 @@ henrietta
 arabia
 montague
 edwards
+angelo
+coventry
