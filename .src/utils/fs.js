@@ -1,3 +1,4 @@
+import { unlinkSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 
 export function generatePath(word) {

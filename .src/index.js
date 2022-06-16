@@ -2,10 +2,10 @@
 import wordsFrequency from '@derock.ir/words-frequency';
 import { existsSync, mkdirSync } from 'fs';
 import colors from 'colors';
-import { lookup } from './utils/lookup';
-import { persist } from './utils/persist';
-import { append, generatePath, remove } from './utils/fs';
-import { blackList } from './data/black-list';
+import { lookup } from './utils/lookup.js';
+import { persist } from './utils/persist.js';
+import { append, generatePath, remove } from './utils/fs.js';
+import { blackList } from './data/black-list.js';
 
 async function processWord({ word, rank, occurrence }, dir) {
   try {
