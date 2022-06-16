@@ -1,15 +1,15 @@
 {
   "name": "@derock.ir/dictionary",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An English dictionary with words frequency info",
-  "main": ".dist/words-list.js",
+  "main": ".dist/words-list.cjs",
   "type": "module",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "files":  [
-    ".dist/words-list.js"
+    ".dist/words-list.cjs"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

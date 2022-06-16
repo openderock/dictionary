@@ -16,7 +16,7 @@ export function generateLists(list) {
   const jsArray = list
     .map(([rank, word, percentage]) => `[${rank},"${word}",${percentage}]`)
     .join(',');
-  writeFileSync('./.dist/words-list.js', `module.exports=[${jsArray}];`, {
+  writeFileSync('./.dist/words-list.cjs', `module.exports=[${jsArray}];`, {
     encoding: 'utf-8',
   });
 
