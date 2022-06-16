@@ -43,3 +43,5 @@ vedic
 enigmatical
 indus
 passover
+punic
+jc
