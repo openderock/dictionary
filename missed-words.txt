@@ -49,3 +49,5 @@ doric
 jul
 albanian
 argentina
+azores
+jh
