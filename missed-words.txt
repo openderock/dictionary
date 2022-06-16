@@ -105,3 +105,5 @@ assam
 chios
 kat
 ccc
+burman
+capriciously
