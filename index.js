@@ -47,7 +47,6 @@ async function lookup(word) {
     if (wikitionaryEntry.length == 0) {
       throw new Error('Not Found');
     }
-    debugger;
     return wikitionaryEntry;
   }
 }
