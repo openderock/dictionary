@@ -12,3 +12,8 @@ esq
 pg
 fewer
 vii
+accessed
+methinks
+celtic
+damascus
+maketh
