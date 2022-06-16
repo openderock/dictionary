@@ -58,3 +58,6 @@ selene
 filipino
 chivalric
 cheapside
+fahrenheit
+ww
+cm
