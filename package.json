@@ -4,6 +4,13 @@
   "description": "An English dictionary with words frequency info",
   "main": ".dist/words-list.js",
   "type": "module",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files":  [
+    ".dist/words-list.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./.src/index.js"
