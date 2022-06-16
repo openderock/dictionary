@@ -1,45 +1,30 @@
 // @ts-check
 import wordsFrequency from '@derock.ir/words-frequency';
 import { existsSync, mkdirSync } from 'fs';
-import colors from 'colors';
-import { lookup } from './utils/lookup.js';
-import { persist } from './utils/persist.js';
-import { append, generatePath, remove } from './utils/fs.js';
 import { blackList } from './data/black-list.js';
-
-async function processWord({ word, rank, occurrence }, dir) {
-  try {
-    const records = await lookup(word);
-    const data = {
-      word,
-      rank,
-      occurrence,
-      records,
-    };
-    await persist(dir, word, data);
-    console.log(
-      `[${colors.green(word)}]: saved. ${(
-        (rank * 100) /
-        wordsFrequency.length
-      ).toFixed(2)}%`
-    );
-  } catch (error) {
-    console.log(`[${colors.green(word)}]: ${error.message}.`);
-    append('.dist/missed-words.txt', `\n${word}`);
-  }
-}
+import { generatePath, remove } from './utils/fs.js';
+import { generateLists } from './utils/generate-lists.js';
+import { processWord } from './utils/process-word.js';
 
 async function main() {
   remove('.dist/missed-words.txt');
+  const list = [];
   for (const [rank, word, occurrence] of wordsFrequency) {
-    const dir = generatePath(word);
-    mkdirSync(dir, { recursive: true });
+    const dest = generatePath(word);
+    mkdirSync(dest, { recursive: true });
     // @ts-ignore
-    if (blackList.includes(word) || existsSync(`${dir}/${word}.json`)) {
+    if (blackList.includes(word)) {
       continue;
     }
-    await processWord({ rank, word, occurrence }, dir);
+    const exists =
+      existsSync(`${dest}/${word}.json`) ||
+      (await processWord({ rank, word, occurrence }, dest));
+    if (exists) {
+      list.push([rank, word, occurrence]);
+    }
   }
+  // @ts-ignore
+  generateLists(list);
 }
 
 console.time('FIN');

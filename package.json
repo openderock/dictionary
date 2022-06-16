@@ -1,8 +1,8 @@
 {
-  "name": "dictionary",
+  "name": "@derock.ir/dictionary",
   "version": "1.0.0",
   "description": "An English dictionary with words frequency info",
-  "main": "index.js",
+  "main": ".dist/words-list.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
