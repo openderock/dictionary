@@ -45,3 +45,6 @@ indus
 passover
 punic
 jc
+doric
+jul
+albanian
